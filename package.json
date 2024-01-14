@@ -8,6 +8,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build src/index.html"
   },
+  "extends": "@parcel/config-default",
+  "transforms": {
+    "*.scss": [
+      "@parcel/transformer-sass"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -20,9 +31,12 @@
     "react-router-dom": "^6.21.2"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.10.3",
+    "@parcel/transformer-sass": "^2.11.0",
+    "autoprefixer": "^9.8.6",
     "file-loader": "^6.2.0",
     "parcel": "^2.10.3",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.5",
     "process": "^0.11.10",
     "sass": "^1.69.7"
   }
