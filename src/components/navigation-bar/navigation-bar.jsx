@@ -12,9 +12,6 @@ export const NavigationBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className="d-flex align-items-center" as={Link} to="/">
-                Home
-              </Nav.Link>
               <Nav.Link className="d-flex align-items-center" as={Link} to="/about">
                 About
               </Nav.Link>
@@ -32,7 +29,7 @@ export const NavigationBar = () => {
                 </a>
               </Nav.Link>
               <Nav.Link as='a'>
-                <a href="https://www.linkedin.com/feed/" target="_blank">
+                <a href="https://www.linkedin.com/in/nemanja-banicevic-1b37492aa/" target="_blank">
                   <img className="footer-image" src={require("../../img/linkedin_logo.png")} alt="LinkedIn icon" />
                 </a>
               </Nav.Link>

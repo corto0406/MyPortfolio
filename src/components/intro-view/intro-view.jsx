@@ -1,12 +1,11 @@
-import { Container, Navbar } from 'react-bootstrap';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import React from 'react';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const IntroView = () => {
   return (
     <>
-      <Container className=''>
+      <Container>
         <Row className='mt-5'>
           <Col xs={12} lg={4} className='mb-5 mb-lg-0'>
             <Image alt="A portrait of me" src={require('../../img/portret.jpg')} roundedCircle fluid />
@@ -14,24 +13,17 @@ export const IntroView = () => {
           <Col xs={12} lg={8} className='d-flex flex-column justify-content-center ps-5'>
             <h1>Hello</h1>
             <h3>My name is Nemanja Banicevic. I am a Maritime Engineer turned Web Developer from Sweden. </h3>
+            <div className="d-flex mt-3">
+              <Link to="/portfolio" className="btn btn-primary btn-lg me-3" role="button">
+                My Work
+              </Link>
+              <a className="btn btn-primary btn-lg" href="https://github.com/corto0406/MyPortfolio" role="button" target='_blank'>
+                My Portfolio Repo
+              </a>
+            </div>
           </Col>
         </Row>
       </Container>
-      {/* <Navbar sticky='bottom'>
-      <Container>
-        <Navbar.Brand as={Link} to="/">
-          Nemanja Banicevic
-        </Navbar.Brand>
-      </Container>
-    </Navbar> */}
-      {/* <Container>
-      <Row className='d-flex justify-content-center'><h3 className='d-flex justify-content-center'>Find me on:</h3></Row>
-      <Row className='d-flex justify-content-center'>
-        <Col xs={1}>
-          <a href="" target="_blank"><img id="gh_logo" className="social-media--icon" src={require("")} alt="Github icon" /></a>
-         </Col>  
-        </Row>
-    </Container> */}
     </>
   );
 };

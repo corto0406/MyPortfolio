@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"d8m58":[function(require,module,exports) {
+})({"5qIsR":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -226,7 +226,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
     var hostname = getHostname();
     var port = getPort();
-    var protocol = HMR_SECURE || location.protocol == "https:" && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? "wss" : "ws";
+    var protocol = HMR_SECURE || location.protocol == "https:" && ![
+        "localhost",
+        "127.0.0.1",
+        "0.0.0.0"
+    ].includes(hostname) ? "wss" : "ws";
     var ws;
     try {
         ws = new WebSocket(protocol + "://" + hostname + (port ? ":" + port : "") + "/");
@@ -40421,21 +40425,11 @@ const NavigationBar = ()=>{
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
                                         className: "d-flex align-items-center",
                                         as: (0, _reactRouterDom.Link),
-                                        to: "/",
-                                        children: "Home"
-                                    }, void 0, false, {
-                                        fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 15,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                        className: "d-flex align-items-center",
-                                        as: (0, _reactRouterDom.Link),
                                         to: "/about",
                                         children: "About"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 18,
+                                        lineNumber: 15,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -40445,7 +40439,7 @@ const NavigationBar = ()=>{
                                         children: "Contact"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 21,
+                                        lineNumber: 18,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -40455,7 +40449,7 @@ const NavigationBar = ()=>{
                                         children: "My Projects"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 24,
+                                        lineNumber: 21,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
@@ -40477,23 +40471,23 @@ const NavigationBar = ()=>{
                                                 alt: "Github icon"
                                             }, void 0, false, {
                                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                                lineNumber: 31,
+                                                lineNumber: 28,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 30,
+                                            lineNumber: 27,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 29,
+                                        lineNumber: 26,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
                                         as: "a",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                            href: "https://www.linkedin.com/feed/",
+                                            href: "https://www.linkedin.com/in/nemanja-banicevic-1b37492aa/",
                                             target: "_blank",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                                 className: "footer-image",
@@ -40501,23 +40495,23 @@ const NavigationBar = ()=>{
                                                 alt: "LinkedIn icon"
                                             }, void 0, false, {
                                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                                lineNumber: 36,
+                                                lineNumber: 33,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 35,
+                                            lineNumber: 32,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 34,
+                                        lineNumber: 31,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                lineNumber: 28,
+                                lineNumber: 25,
                                 columnNumber: 13
                             }, undefined)
                         ]
@@ -40968,40 +40962,36 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IntroView", ()=>IntroView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
-var _row = require("react-bootstrap/Row");
-var _rowDefault = parcelHelpers.interopDefault(_row);
-var _col = require("react-bootstrap/Col");
-var _colDefault = parcelHelpers.interopDefault(_col);
-var _image = require("react-bootstrap/Image");
-var _imageDefault = parcelHelpers.interopDefault(_image);
+var _reactRouterDom = require("react-router-dom");
 const IntroView = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-            className: "",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
                 className: "mt-5",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                         xs: 12,
                         lg: 4,
                         className: "mb-5 mb-lg-0",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
                             alt: "A portrait of me",
                             src: require("79b7084ca45c7791"),
                             roundedCircle: true,
                             fluid: true
                         }, void 0, false, {
                             fileName: "src/components/intro-view/intro-view.jsx",
-                            lineNumber: 12,
+                            lineNumber: 11,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/intro-view/intro-view.jsx",
-                        lineNumber: 11,
+                        lineNumber: 10,
                         columnNumber: 11
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                         xs: 12,
                         lg: 8,
                         className: "d-flex flex-column justify-content-center ps-5",
@@ -41010,12 +41000,42 @@ const IntroView = ()=>{
                                 children: "Hello"
                             }, void 0, false, {
                                 fileName: "src/components/intro-view/intro-view.jsx",
-                                lineNumber: 15,
+                                lineNumber: 14,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                 children: "My name is Nemanja Banicevic. I am a Maritime Engineer turned Web Developer from Sweden. "
                             }, void 0, false, {
+                                fileName: "src/components/intro-view/intro-view.jsx",
+                                lineNumber: 15,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "d-flex mt-3",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/portfolio",
+                                        className: "btn btn-primary btn-lg me-3",
+                                        role: "button",
+                                        children: "My Work"
+                                    }, void 0, false, {
+                                        fileName: "src/components/intro-view/intro-view.jsx",
+                                        lineNumber: 17,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "btn btn-primary btn-lg",
+                                        href: "https://github.com/corto0406/MyPortfolio",
+                                        role: "button",
+                                        target: "_blank",
+                                        children: "My Portfolio Repo"
+                                    }, void 0, false, {
+                                        fileName: "src/components/intro-view/intro-view.jsx",
+                                        lineNumber: 20,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/intro-view/intro-view.jsx",
                                 lineNumber: 16,
                                 columnNumber: 13
@@ -41023,18 +41043,18 @@ const IntroView = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/intro-view/intro-view.jsx",
-                        lineNumber: 14,
+                        lineNumber: 13,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/intro-view/intro-view.jsx",
-                lineNumber: 10,
+                lineNumber: 9,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/intro-view/intro-view.jsx",
-            lineNumber: 9,
+            lineNumber: 8,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -41048,7 +41068,7 @@ $RefreshReg$(_c, "IntroView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap/Image":"cyVPa","79b7084ca45c7791":"az6PW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"az6PW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","79b7084ca45c7791":"az6PW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}],"az6PW":[function(require,module,exports) {
 module.exports = require("769bbd6b577af0a2").getBundleURL("byUka") + "portret.c9321e7e.jpg" + "?" + Date.now();
 
 },{"769bbd6b577af0a2":"lgJ39"}],"4Mh8i":[function(require,module,exports) {
@@ -41645,6 +41665,6 @@ module.exports = require("152168272608f835").getBundleURL("byUka") + "movia.0478
 },{"152168272608f835":"lgJ39"}],"9qMBr":[function(require,module,exports) {
 module.exports = require("33584379f1d82fb9").getBundleURL("byUka") + "pokemon.41c515b3.png" + "?" + Date.now();
 
-},{"33584379f1d82fb9":"lgJ39"}]},["d8m58","1xC6H","d8Dch"], "d8Dch", "parcelRequire4e47")
+},{"33584379f1d82fb9":"lgJ39"}]},["5qIsR","1xC6H","d8Dch"], "d8Dch", "parcelRequire4e47")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
